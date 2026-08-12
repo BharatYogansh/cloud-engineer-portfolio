@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Yogansh — Mission Control (WIP)</title>
+<meta name="description" content="Bharat Yogansh — Backend Engineer &amp; ML/Data Enthusiast. Scroll through a live mission-control feed where every transmission is a real project, skill, or credential.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2305070a%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 text-anchor=%22middle%22 fill=%22%235eead4%22 font-family=%22monospace%22>BY</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mission.css">
+</head>
+<body>
+
+<!--
+  Parked for now — scroll-per-section felt too long and panel content wasn't
+  landing well. Keeping the file so it's easy to pick back up later; the main
+  site is index.html (the enhanced simple/card layout).
+-->
+
+<noscript>
+  <div class="noscript-note">
+    This page is an interactive experience and needs JavaScript.
+    <a href="index.html" style="color:#5eead4; margin-left:8px;">View the main site instead →</a>
+  </div>
+</noscript>
+
+<!-- Boot sequence -->
+<div id="boot">
+  <div id="boot-lines"></div>
+  <div id="boot-skip">click anywhere to skip</div>
+</div>
+
+<!-- Background layers -->
+<canvas id="stars-canvas"></canvas>
+<div class="nebula">
+  <div class="nebula-blob b1"></div>
+  <div class="nebula-blob b2"></div>
+  <div class="nebula-blob b3"></div>
+</div>
+<div class="vignette"></div>
+<div class="grain"></div>
+
+<!-- Custom cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- HUD frame corners -->
+<span class="hud-frame-corner tl"></span>
+<span class="hud-frame-corner tr"></span>
+<span class="hud-frame-corner bl"></span>
+<span class="hud-frame-corner br"></span>
+
+<!-- HUD top bar -->
+<div class="hud-top">
+  <a href="#" class="hud-brand">
+    <span class="patch">BY</span>
+    <span>MISSION_CONTROL</span>
+  </a>
+  <div class="hud-status" id="progressSection">SECTION 01/10 — <span class="value">INTRO</span></div>
+  <div class="hud-links">
+    <a href="index.html" class="hud-link">Main site</a>
+    <a href="https://github.com/BharatYogansh" target="_blank" rel="noopener" class="hud-link">GitHub</a>
+  </div>
+</div>
+
+<!-- HUD bottom progress -->
+<div class="hud-bottom">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-readout">
+    <span>Mission progress</span>
+    <span class="value" id="progressPercent">0%</span>
+  </div>
+</div>
+
+<!-- Side progress rail -->
+<aside class="progress-rail" aria-hidden="true">
+  <span class="progress-dot active"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+  <span class="progress-dot"></span>
+</aside>
+
+<!-- Hero -->
+<div class="hero-overlay">
+  <p class="eyebrow">Mission Control · Live Feed</p>
+  <h1>Bharat Yogansh <strong>Portfolio</strong></h1>
+  <p class="hero-sub">Backend Engineer · ML/Data Enthusiast</p>
+  <div class="scroll-hint">
+    <span>Scroll to begin transmission</span>
+    <span class="chevron"></span>
+  </div>
+</div>
+
+<!-- Panel 0 — Project: ML Model Health Monitor (right) -->
+<div class="panel side-right" data-card="0">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">Transmission 01 · Project</span>
+  <h2>Live ML Model Health Monitor</h2>
+  <p class="desc">A housing-price model deployed behind FastAPI, watched by a Kolmogorov-Smirnov drift detector, visualized in a live Streamlit dashboard. Windsor Housing dataset, 546 real sales.</p>
+  <div class="stat-row">
+    <div class="stat-label"><span>Model fit</span><span class="val">R² = 0.57</span></div>
+    <div class="stat-track"><div class="stat-fill"></div></div>
+  </div>
+  <div class="chips"><span>FastAPI</span><span>Scikit-learn</span><span>Docker</span><span>Streamlit</span></div>
+  <a href="https://github.com/BharatYogansh/ml-monitor-pipeline" target="_blank" rel="noopener" class="panel-btn">View repository →</a>
+</div>
+
+<!-- Panel 1 — Skills: Languages & Backend (left) -->
+<div class="panel side-left" data-card="1">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">System · Skills</span>
+  <h2>Languages &amp; Backend</h2>
+  <div class="system-list">
+    <div class="system-item"><span class="led"></span>Python, Java, C/C++, JavaScript, SQL</div>
+    <div class="system-item"><span class="led"></span>FastAPI, Express, REST APIs</div>
+    <div class="system-item"><span class="led"></span>React.js, MQTT, Socket.io</div>
+  </div>
+</div>
+
+<!-- Panel 2 — Project: News Classification (left) -->
+<div class="panel side-left" data-card="2">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">Transmission 02 · Project</span>
+  <h2>News Topic Classification &amp; Analytics Dashboard</h2>
+  <p class="desc">TF-IDF text classification on 20 Newsgroups, comparing three classifiers head-to-head with real confusion matrices and manual error analysis — not a single reported score.</p>
+  <div class="stat-row">
+    <div class="stat-label"><span>Accuracy (Naive Bayes, best of 3)</span><span class="val">85.8%</span></div>
+    <div class="stat-track"><div class="stat-fill"></div></div>
+  </div>
+  <div class="chips"><span>Scikit-learn</span><span>TF-IDF</span><span>Streamlit</span><span>NLP</span></div>
+  <a href="https://github.com/BharatYogansh/news-text-classification" target="_blank" rel="noopener" class="panel-btn">View repository →</a>
+</div>
+
+<!-- Panel 3 — Skills: ML, Data & Cloud (right) -->
+<div class="panel side-right" data-card="3">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">System · Skills</span>
+  <h2>ML, Data &amp; Cloud</h2>
+  <div class="system-list">
+    <div class="system-item"><span class="led"></span>Scikit-learn, Pandas, NumPy, TF-IDF</div>
+    <div class="system-item"><span class="led"></span>Drift monitoring (KS-test)</div>
+    <div class="system-item"><span class="led"></span>Google Cloud: Cloud Run, Kubernetes, BigQuery, CI/CD</div>
+  </div>
+</div>
+
+<!-- Panel 4 — Project: IoT Orchestration (right) -->
+<div class="panel side-right" data-card="4">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">Transmission 03 · Project</span>
+  <h2>IoT Device Management &amp; OTA Orchestration</h2>
+  <p class="desc">A four-tier IoT platform — ESP32 devices, an MQTT event pipeline, an event-driven FastAPI backend, and a React dashboard for live monitoring and secure Over-the-Air firmware updates.</p>
+  <div class="status-tag"><span class="dot"></span>Deployed · B.Tech final-year project</div>
+  <div class="chips"><span>FastAPI</span><span>MQTT</span><span>React.js</span><span>ESP32</span></div>
+  <a href="https://github.com/BharatYogansh/iot-orchestration-dashboard" target="_blank" rel="noopener" class="panel-btn">View repository →</a>
+</div>
+
+<!-- Panel 5 — Credential: Education (left) -->
+<div class="panel side-left" data-card="5">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">Credential · Education</span>
+  <div class="badge-icon">ED</div>
+  <h2>B.Tech, Computer Science &amp; Engineering</h2>
+  <p class="desc">Roorkee College of Engineering, Uttarakhand Technical University · Expected 2026<br>12th (PCM): 93.60% · 10th: 81.50%</p>
+  <span class="stamp">Verified</span>
+</div>
+
+<!-- Panel 6 — Project: SkillSwap (left) -->
+<div class="panel side-left" data-card="6">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">Transmission 04 · Project</span>
+  <h2>SkillSwap</h2>
+  <p class="desc">A zero-money skill-barter platform. Credit escrow on swap completion runs inside a real MongoDB transaction so a debit, credit, and status change all succeed or all roll back together.</p>
+  <div class="status-tag"><span class="dot"></span>Live · tested with an in-process MongoDB replica set</div>
+  <div class="chips"><span>React</span><span>Express</span><span>MongoDB</span><span>Socket.io</span></div>
+  <a href="https://github.com/BharatYogansh/skillswap" target="_blank" rel="noopener" class="panel-btn">View repository →</a>
+</div>
+
+<!-- Panel 7 — Credential: Certifications (center) -->
+<div class="panel side-center" data-card="7">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">Credential · Certifications</span>
+  <div class="badge-icon">CT</div>
+  <h2>Google Cloud &amp; Anthropic</h2>
+  <p class="desc">Google Cloud: CI/CD Pipelines, Kubernetes, Cloud Run (Serverless)<br>Anthropic / Claude: Claude Code, Claude Platform API, Model Context Protocol</p>
+  <span class="stamp">Clearance granted</span>
+</div>
+
+<!-- Final panel — Contact -->
+<div class="panel side-center" data-card="contact">
+  <span class="scan-bar"></span>
+  <span class="panel-kicker">Open channel</span>
+  <h2>Let's build something</h2>
+  <p class="desc">Open to software engineering and applied ML roles, internships, and interesting problems in general. Tijara, Rajasthan, India · open to relocation and remote.</p>
+  <div class="contact-links">
+    <a href="mailto:bharatyogansh@gmail.com">Email</a>
+    <a href="tel:+918107905873">Phone</a>
+    <a href="https://www.linkedin.com/in/bharat-yogansh" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/BharatYogansh" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <p class="desc" style="margin-top:16px; font-size:0.72rem;">© <span id="year"></span> Bharat Yogansh</p>
+</div>
+
+<div class="banner" id="perfBanner">
+  Lighter device detected — the scene is scaled down automatically. For the smoothest experience, try the <a href="index.html">main site</a>.
+</div>
+
+<div class="banner" id="missionError">
+  <strong>Something didn't load.</strong><br>
+  Try refreshing, or use the <a href="index.html">main site</a> instead.
+</div>
+
+<div id="scroll-space"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="mission.js"></script>
+<script>
+  setTimeout(function () {
+    if (!window.__missionReady) {
+      var b = document.getElementById("missionError");
+      if (b) b.classList.add("show");
+    }
+  }, 4000);
+</script>
+</body>
+</html>

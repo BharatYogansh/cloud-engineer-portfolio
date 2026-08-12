@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Yogansh — Backend &amp; ML Engineer</title>
+<meta name="description" content="Bharat Yogansh — Backend Engineer &amp; ML/Data Enthusiast. IoT systems, ML pipelines, NLP, and full-stack projects.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230b0f14%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 text-anchor=%22middle%22 fill=%22%235eead4%22 font-family=%22monospace%22>BY</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#top" class="logo">BY<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-nav="about">About</a></li>
+      <li><a href="#skills" data-nav="skills">Skills</a></li>
+      <li><a href="#projects" data-nav="projects">Projects</a></li>
+      <li><a href="#education" data-nav="education">Education</a></li>
+      <li><a href="#contact" class="btn-small">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="top" class="hero">
+    <div class="hero-spotlight" id="heroSpotlight"></div>
+    <div class="hero-inner reveal">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1 class="gradient-text">Bharat Yogansh</h1>
+      <p class="hero-role">Backend Engineer <span class="dot">&middot;</span> ML/Data Enthusiast</p>
+      <p class="hero-blurb">
+        Final-year B.Tech CSE student who builds production-oriented systems end to end &mdash;
+        not just notebooks. IoT device orchestration, monitored ML pipelines, NLP classification,
+        and full-stack apps with real transactions and real tests behind them.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/BharatYogansh" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/bharat-yogansh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:bharatyogansh@gmail.com">Email</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-inner reveal">
+      <h2 class="section-title"><span class="tag">01</span> About</h2>
+      <p class="about-text">
+        I go deep on the projects I take on instead of skimming across many. At my IoT capstone I
+        architected the FastAPI backend and MQTT event pipeline behind a live device-orchestration
+        dashboard. On my own time I've built a monitored ML inference pipeline with real drift
+        detection, an NLP text-classification system comparing three algorithms with honest
+        evaluation metrics, and a full-stack skill-barter platform with atomic credit transactions
+        and real integration tests. Strong fundamentals in Python, Java, C/C++, and Google Cloud.
+        Looking for a software engineering or applied ML role where things need to keep working
+        after they ship.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section alt">
+    <div class="section-inner reveal">
+      <h2 class="section-title"><span class="tag">02</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card" style="--d:0">
+          <h3>Languages</h3>
+          <div class="chips">
+            <span>Python</span><span>Java</span><span>C/C++</span><span>JavaScript</span><span>SQL</span><span>Bash/Shell</span>
+          </div>
+        </div>
+        <div class="skill-card" style="--d:1">
+          <h3>Backend &amp; Web</h3>
+          <div class="chips">
+            <span>FastAPI</span><span>Express</span><span>REST APIs</span><span>React.js</span><span>MQTT</span><span>Socket.io</span><span>ESP32/IoT firmware</span>
+          </div>
+        </div>
+        <div class="skill-card" style="--d:2">
+          <h3>ML &amp; Data Science</h3>
+          <div class="chips">
+            <span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>TF-IDF</span><span>Word2Vec</span><span>NLTK</span><span>spaCy</span>
+          </div>
+        </div>
+        <div class="skill-card" style="--d:3">
+          <h3>MLOps</h3>
+          <div class="chips">
+            <span>Model serving</span><span>Drift monitoring (KS-test)</span><span>Docker Compose</span>
+          </div>
+        </div>
+        <div class="skill-card" style="--d:4">
+          <h3>Cloud (GCP)</h3>
+          <div class="chips">
+            <span>Cloud Run</span><span>Kubernetes</span><span>BigQuery</span><span>Firebase/Firestore</span><span>CI/CD Pipelines</span>
+          </div>
+        </div>
+        <div class="skill-card" style="--d:5">
+          <h3>Databases &amp; Tools</h3>
+          <div class="chips">
+            <span>MongoDB</span><span>SQLite</span><span>Git</span><span>Docker</span><span>Power BI</span><span>Jupyter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-inner reveal">
+      <h2 class="section-title"><span class="tag">03</span> Projects</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card" style="--d:0">
+          <div class="project-top">
+            <h3>Live ML Model Health Monitor</h3>
+            <a href="https://github.com/BharatYogansh/ml-monitor-pipeline" target="_blank" rel="noopener" class="card-link" aria-label="View source on GitHub">↗</a>
+          </div>
+          <p class="project-desc">
+            A housing-price model deployed behind FastAPI, watched by a Kolmogorov-Smirnov drift
+            detector, and visualized in a live Streamlit dashboard &mdash; because a model that
+            silently drifts is worse than one that never shipped.
+          </p>
+          <ul class="project-stats">
+            <li><strong>R&sup2; = 0.57</strong> &middot; MAE $12,341</li>
+            <li>Windsor Housing dataset &middot; 546 real sales</li>
+          </ul>
+          <div class="chips small">
+            <span>FastAPI</span><span>Scikit-learn</span><span>Docker</span><span>Streamlit</span><span>SQLite</span>
+          </div>
+          <a href="https://github.com/BharatYogansh/ml-monitor-pipeline" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card" style="--d:1">
+          <div class="project-top">
+            <h3>News Topic Classification &amp; Analytics Dashboard</h3>
+            <a href="https://github.com/BharatYogansh/news-text-classification" target="_blank" rel="noopener" class="card-link" aria-label="View source on GitHub">↗</a>
+          </div>
+          <p class="project-desc">
+            TF-IDF text classification on the 20 Newsgroups dataset, comparing three classifiers
+            head-to-head with real accuracy/F1/confusion matrices and manual error analysis, not
+            just a single reported score.
+          </p>
+          <ul class="project-stats">
+            <li><strong>85.8% accuracy</strong> &middot; 0.856 macro F1 (Naive Bayes, best of 3)</li>
+            <li>2,833 real posts &middot; 5 categories</li>
+          </ul>
+          <div class="chips small">
+            <span>Scikit-learn</span><span>TF-IDF</span><span>Streamlit</span><span>NLP</span>
+          </div>
+          <a href="https://github.com/BharatYogansh/news-text-classification" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card" style="--d:2">
+          <div class="project-top">
+            <h3>IoT Device Management &amp; OTA Orchestration</h3>
+            <a href="https://github.com/BharatYogansh/iot-orchestration-dashboard" target="_blank" rel="noopener" class="card-link" aria-label="View source on GitHub">↗</a>
+          </div>
+          <p class="project-desc">
+            A four-tier IoT platform &mdash; ESP32 devices, an MQTT event pipeline, an
+            event-driven FastAPI backend, and a React dashboard for live monitoring and secure
+            Over-the-Air firmware updates.
+          </p>
+          <ul class="project-stats">
+            <li>B.Tech Final Year Project</li>
+            <li>Real-time device state &middot; remote OTA updates</li>
+          </ul>
+          <div class="chips small">
+            <span>FastAPI</span><span>MQTT</span><span>React.js</span><span>ESP32</span>
+          </div>
+          <a href="https://github.com/BharatYogansh/iot-orchestration-dashboard" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card" style="--d:3">
+          <div class="project-top">
+            <h3>SkillSwap</h3>
+            <a href="https://github.com/BharatYogansh/skillswap" target="_blank" rel="noopener" class="card-link" aria-label="View source on GitHub">↗</a>
+          </div>
+          <p class="project-desc">
+            A zero-money skill-barter platform &mdash; trade time and knowledge instead of cash.
+            Credit escrow on swap completion runs inside a real MongoDB transaction so a debit,
+            credit, and status change all succeed or all roll back together.
+          </p>
+          <ul class="project-stats">
+            <li>Atomic credit escrow &middot; real-time chat</li>
+            <li>Tested with an in-process MongoDB replica set</li>
+          </ul>
+          <div class="chips small">
+            <span>React</span><span>Express</span><span>MongoDB</span><span>Socket.io</span><span>JWT</span>
+          </div>
+          <a href="https://github.com/BharatYogansh/skillswap" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section alt">
+    <div class="section-inner reveal">
+      <h2 class="section-title"><span class="tag">04</span> Education &amp; Certifications</h2>
+      <div class="edu-grid">
+        <div class="edu-card" style="--d:0">
+          <h3>B.Tech, Computer Science &amp; Engineering</h3>
+          <p>Roorkee College of Engineering &middot; Uttarakhand Technical University</p>
+          <p class="edu-meta">Expected 2026</p>
+          <p class="edu-meta">12th (PCM): 93.60% &middot; 10th: 81.50%</p>
+        </div>
+        <div class="edu-card" style="--d:1">
+          <h3>Certifications</h3>
+          <p><strong>Google Cloud:</strong> CI/CD Pipelines, Kubernetes, Cloud Run (Serverless)</p>
+          <p><strong>Anthropic / Claude:</strong> Claude Code, Claude Platform API, Model Context Protocol</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="section-inner reveal">
+      <h2 class="section-title"><span class="tag">05</span> Get in Touch</h2>
+      <p class="contact-blurb">Open to software engineering and applied ML roles, internships, and interesting problems in general.</p>
+      <div class="contact-grid">
+        <a href="mailto:bharatyogansh@gmail.com" class="contact-item" style="--d:0">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">bharatyogansh@gmail.com</span>
+        </a>
+        <a href="tel:+918107905873" class="contact-item" style="--d:1">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+91-8107905873</span>
+        </a>
+        <a href="https://www.linkedin.com/in/bharat-yogansh" target="_blank" rel="noopener" class="contact-item" style="--d:2">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">/in/bharat-yogansh</span>
+        </a>
+        <a href="https://github.com/BharatYogansh" target="_blank" rel="noopener" class="contact-item" style="--d:3">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">@BharatYogansh</span>
+        </a>
+      </div>
+      <p class="location">Tijara, Rajasthan, India &middot; open to relocation and remote</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Bharat Yogansh. Built with plain HTML/CSS, deployed on GitHub Pages.</p>
+  <p class="footer-experimental"><a href="mission.html">Experimental "Mission Control" view (work in progress)</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
