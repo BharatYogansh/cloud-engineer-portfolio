@@ -1,5 +1,7 @@
 # Bharat Yogansh — Portfolio
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Site-success?style=flat&logo=googlechrome&logoColor=white)](https://bharatyogansh.github.io/cloud-engineer-portfolio/)
+
 **`index.html`** is the site — a single-page portfolio with real content (no placeholder copy
 anywhere) and genuine polish, but built on plain, reliable document scroll. No scroll-hijacking,
 no "scroll a mile to see the next thing" — you scroll normally and things animate in as they
